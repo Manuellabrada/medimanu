@@ -69,3 +69,40 @@ menu.classList.remove("activo")
 contenido.classList.remove("oculto")
 
 }
+
+function buscarProducto(){
+
+let input=document.getElementById("buscador").value.toLowerCase()
+let productos=document.querySelectorAll(".producto")
+
+productos.forEach(p=>{
+let nombre=p.dataset.nombre
+
+if(nombre.includes(input)){
+p.style.display="block"
+}else{
+p.style.display="none"
+}
+
+})
+
+}
+
+function filtrarCategoria(){
+
+let categoria=document.getElementById("categoria").value
+let productos=document.querySelectorAll(".producto")
+
+productos.forEach(p=>{
+
+if(categoria==="todos"){
+p.style.display="block"
+}else if(p.dataset.categoria===categoria){
+p.style.display="block"
+}else{
+p.style.display="none"
+}
+
+})
+
+}

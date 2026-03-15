@@ -111,13 +111,8 @@ padding:10px;
 cursor:pointer;
 }
 
-.prev{
-left:10px;
-}
-
-.next{
-right:10px;
-}
+.prev{left:10px;}
+.next{right:10px;}
 
 .menu-movil{
 display:none;
@@ -134,6 +129,111 @@ background:none;
 border:none;
 color:white;
 cursor:pointer;
+}
+
+.titulo-horarios{
+text-align:center;
+color:#0d47a1;
+margin-bottom:25px;
+font-size:28px;
+}
+
+.tabla-horarios{
+max-width:500px;
+margin:auto;
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.horario{
+display:flex;
+justify-content:space-between;
+padding:16px 25px;
+border-bottom:1px solid #eee;
+font-size:16px;
+transition:0.3s;
+}
+
+.horario:hover{
+background:#f0f6ff;
+}
+
+.festivo{
+background:#fff5f5;
+}
+
+.titulo-catalogo{
+text-align:center;
+color:#0d47a1;
+margin-bottom:25px;
+}
+
+.busqueda{
+display:flex;
+gap:15px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.busqueda input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.busqueda select{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.catalogo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.producto{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+text-align:center;
+transition:.3s;
+}
+
+.producto img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.producto h3{
+color:#0d47a1;
+margin:15px 0 5px;
+}
+
+.producto p{
+font-size:14px;
+padding:0 15px 15px;
+}
+
+.producto:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp{
+display:inline-block;
+margin-bottom:15px;
+padding:10px 18px;
+background:#25D366;
+color:white;
+border-radius:6px;
+text-decoration:none;
 }
 
 @media (max-width:768px){
@@ -166,71 +266,6 @@ display:flex;
 
 .contenido.oculto{
 display:none;
-}
-
-}
-
-.titulo-horarios{
-text-align:center;
-color:#0d47a1;
-margin-bottom:25px;
-font-size:28px;
-}
-
-.tabla-horarios{
-max-width:500px;
-margin:auto;
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.horario{
-display:flex;
-justify-content:space-between;
-padding:16px 25px;
-border-bottom:1px solid #eee;
-font-size:16px;
-transition:0.3s;
-}
-
-.horario:last-child{
-border-bottom:none;
-}
-
-.horario:hover{
-background:#f0f6ff;
-}
-
-.horario span:first-child{
-font-weight:bold;
-color:#333;
-}
-
-.horario span:last-child{
-color:#0d47a1;
-font-weight:bold;
-}
-
-.festivo{
-background:#fff5f5;
-}
-
-.festivo span{
-color:#c62828;
-font-weight:bold;
-}
-
-@media (max-width:768px){
-
-.tabla-horarios{
-width:100%;
-}
-
-.horario{
-font-size:15px;
-padding:14px 18px;
 }
 
 }

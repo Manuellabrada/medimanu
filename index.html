@@ -46,7 +46,6 @@
 
 <div class="slider">
 <img id="imagenPublicidad" src="imagenes/publicidad1.jpg">
-
 <button class="btn prev" onclick="cambiarImagen(-1)">❮</button>
 <button class="btn next" onclick="cambiarImagen(1)">❯</button>
 </div>
@@ -160,13 +159,59 @@ y la distribución de insumos médicos de alta calidad para mejorar el bienestar
 
 <section id="insumos" class="tarjeta oculto">
 
-<h1>Insumos médicos</h1>
+<h1 class="titulo-catalogo">Catálogo de insumos médicos</h1>
 
-<div class="cards">
-<div class="card">Insumo médico</div>
-<div class="card">Insumo médico</div>
-<div class="card">Insumo médico</div>
-<div class="card">Insumo médico</div>
+<div class="busqueda">
+
+<input type="text" id="buscador" placeholder="Buscar insumo médico..." onkeyup="buscarProducto()">
+
+<select id="categoria" onchange="filtrarCategoria()">
+<option value="todos">Todas las categorías</option>
+<option value="inyeccion">Inyección</option>
+<option value="proteccion">Protección</option>
+<option value="soluciones">Soluciones</option>
+<option value="equipo">Equipo médico</option>
+</select>
+
+</div>
+
+<div class="catalogo" id="catalogo">
+
+<div class="producto" data-nombre="jeringa esteril" data-categoria="inyeccion">
+<img src="imagenes/jeringa.jpg">
+<h3>Jeringa estéril</h3>
+<p>Jeringa desechable para uso clínico.</p>
+<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
+</div>
+
+<div class="producto" data-nombre="guantes latex" data-categoria="proteccion">
+<img src="imagenes/guantes.jpg">
+<h3>Guantes de látex</h3>
+<p>Guantes médicos resistentes.</p>
+<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
+</div>
+
+<div class="producto" data-nombre="cubrebocas medico" data-categoria="proteccion">
+<img src="imagenes/cubrebocas.jpg">
+<h3>Cubrebocas médico</h3>
+<p>Protección respiratoria desechable.</p>
+<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
+</div>
+
+<div class="producto" data-nombre="suero fisiologico" data-categoria="soluciones">
+<img src="imagenes/suero.jpg">
+<h3>Suero fisiológico</h3>
+<p>Solución intravenosa estéril.</p>
+<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
+</div>
+
+<div class="producto" data-nombre="cateter intravenoso" data-categoria="equipo">
+<img src="imagenes/cateter.jpg">
+<h3>Catéter intravenoso</h3>
+<p>Para administración intravenosa.</p>
+<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
+</div>
+
 </div>
 
 </section>
