@@ -30,12 +30,37 @@
 
 <section id="empresa" class="tarjeta">
 
-<h1>Sobre nosotros</h1>
+<h1>Empresa</h1>
+
+<div class="empresa-tabs">
+<button onclick="mostrarEmpresa('publicidad')">Publicidad</button>
+<button onclick="mostrarEmpresa('info')">Sobre la empresa</button>
+</div>
+
+<div id="publicidad" class="empresa-contenido">
+
+<div class="slider">
+
+<img id="imagenPublicidad" src="imagenes/publicidad1.jpg">
+
+<button class="btn prev" onclick="cambiarImagen(-1)">❮</button>
+<button class="btn next" onclick="cambiarImagen(1)">❯</button>
+
+</div>
+
+</div>
+
+<div id="info" class="empresa-contenido oculto">
 
 <p>
 Medivital es una empresa dedicada a brindar soluciones médicas modernas mediante sueroterapia
 y la distribución de insumos médicos de alta calidad para mejorar el bienestar de los pacientes.
+
+Nuestro objetivo es mejorar la salud, energía y recuperación de las personas mediante tratamientos
+seguros, supervisados y utilizando equipo médico certificado.
 </p>
+
+</div>
 
 </section>
 

@@ -1,29 +1,55 @@
 function mostrar(seccion){
 
-let secciones=document.querySelectorAll("section");
+document.querySelectorAll(".tarjeta").forEach(t=>{
+t.classList.add("oculto")
+})
 
-secciones.forEach(sec=>{
-sec.classList.add("oculto");
-});
-
-document.getElementById(seccion).classList.remove("oculto");
-
-if(window.innerWidth<900){
-document.querySelector(".menu").classList.remove("activo");
-}
+document.getElementById(seccion).classList.remove("oculto")
 
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+function mostrarEmpresa(seccion){
 
-const boton=document.createElement("div");
-boton.innerHTML="☰";
-boton.classList.add("hamburguesa");
+document.querySelectorAll(".empresa-contenido").forEach(c=>{
+c.classList.add("oculto")
+})
 
-document.body.appendChild(boton);
+document.getElementById(seccion).classList.remove("oculto")
 
-boton.addEventListener("click",()=>{
-document.querySelector(".menu").classList.toggle("activo");
-});
+}
 
-});
+let imagenes=[
+"imagenes/publicidad1.jpg",
+"imagenes/publicidad2.jpg",
+"imagenes/publicidad3.jpg"
+]
+
+let indice=0
+
+function cambiarImagen(direccion){
+
+indice+=direccion
+
+if(indice<0){
+indice=imagenes.length-1
+}
+
+if(indice>=imagenes.length){
+indice=0
+}
+
+document.getElementById("imagenPublicidad").src=imagenes[indice]
+
+}
+
+setInterval(()=>{
+
+indice++
+
+if(indice>=imagenes.length){
+indice=0
+}
+
+document.getElementById("imagenPublicidad").src=imagenes[indice]
+
+},4000)
