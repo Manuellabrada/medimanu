@@ -127,13 +127,8 @@ padding:10px;
 cursor:pointer;
 }
 
-.prev{
-left:10px;
-}
-
-.next{
-right:10px;
-}
+.prev{ left:10px; }
+.next{ right:10px; }
 
 .menu-movil{
 display:none;
@@ -156,6 +151,10 @@ cursor:pointer;
 
 .contenedor-principal{
 flex-direction:column;
+}
+
+.menu h2{
+display:none;
 }
 
 .menu{

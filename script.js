@@ -55,7 +55,5 @@ document.getElementById("imagenPublicidad").src=imagenes[indice]
 },4000)
 
 function toggleMenu(){
-
 document.getElementById("menu").classList.toggle("activo")
-
 }
