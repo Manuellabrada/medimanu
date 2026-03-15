@@ -1,6 +1,6 @@
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 background:#f4f6f8;
 }
 
@@ -102,16 +102,10 @@ background:#1e88e5;
 color:white;
 cursor:pointer;
 border-radius:6px;
-font-weight:bold;
-}
-
-.empresa-tabs button:hover{
-background:#1565c0;
 }
 
 .slider{
 position:relative;
-width:100%;
 max-width:700px;
 margin:auto;
 }
@@ -129,9 +123,8 @@ background:rgba(0,0,0,0.5);
 color:white;
 border:none;
 font-size:25px;
-padding:10px 15px;
+padding:10px;
 cursor:pointer;
-border-radius:50%;
 }
 
 .prev{
@@ -142,6 +135,44 @@ left:10px;
 right:10px;
 }
 
-.empresa-contenido{
-margin-top:20px;
+.menu-movil{
+display:none;
+background:#0d47a1;
+color:white;
+padding:15px;
+align-items:center;
+gap:15px;
+}
+
+.hamburguesa{
+font-size:25px;
+background:none;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.contenedor-principal{
+flex-direction:column;
+}
+
+.menu{
+position:absolute;
+top:60px;
+left:-260px;
+width:250px;
+height:100%;
+transition:0.3s;
+}
+
+.menu.activo{
+left:0;
+}
+
+.menu-movil{
+display:flex;
+}
+
 }
