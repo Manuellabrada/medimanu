@@ -69,22 +69,6 @@ border-radius:8px;
 margin-bottom:10px;
 }
 
-.horarios{
-margin-top:20px;
-}
-
-.fila-horario{
-display:flex;
-justify-content:space-between;
-padding:10px;
-border-bottom:1px solid #ddd;
-}
-
-.festivo{
-color:red;
-font-weight:bold;
-}
-
 .oculto{
 display:none;
 }
@@ -127,8 +111,8 @@ padding:10px;
 cursor:pointer;
 }
 
-.prev{ left:10px; }
-.next{ right:10px; }
+.prev{left:10px;}
+.next{right:10px;}
 
 .menu-movil{
 display:none;
@@ -158,12 +142,13 @@ display:none;
 }
 
 .menu{
-position:absolute;
+position:fixed;
 top:60px;
 left:-260px;
 width:250px;
 height:100%;
 transition:0.3s;
+z-index:1000;
 }
 
 .menu.activo{
@@ -172,6 +157,10 @@ left:0;
 
 .menu-movil{
 display:flex;
+}
+
+.contenido.oculto{
+display:none;
 }
 
 }
