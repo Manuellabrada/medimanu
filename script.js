@@ -83,7 +83,6 @@ p.style.display="block"
 }else{
 p.style.display="none"
 }
-
 })
 
 }
@@ -104,5 +103,18 @@ p.style.display="none"
 }
 
 })
+
+}
+
+function enviarWhats(btn){
+
+let producto=btn.parentElement.dataset.nombre
+let numero="5215512345678"
+
+let mensaje=`Hola, me interesa el producto: ${producto}`
+
+let url=`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`
+
+window.open(url,"_blank")
 
 }
