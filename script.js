@@ -44,7 +44,10 @@ document.getElementById("imagenPublicidad").src=imagenes[indice]
 setInterval(()=>{
 
 indice++
-if(indice>=imagenes.length){indice=0}
+
+if(indice>=imagenes.length){
+indice=0
+}
 
 document.getElementById("imagenPublicidad").src=imagenes[indice]
 
@@ -76,6 +79,7 @@ let input=document.getElementById("buscador").value.toLowerCase()
 let productos=document.querySelectorAll(".producto")
 
 productos.forEach(p=>{
+
 let nombre=p.dataset.nombre
 
 if(nombre.includes(input)){
@@ -83,6 +87,7 @@ p.style.display="block"
 }else{
 p.style.display="none"
 }
+
 })
 
 }
