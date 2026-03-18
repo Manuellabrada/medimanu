@@ -114,7 +114,7 @@ p.style.display="none"
 function enviarWhats(btn){
 
 let producto=btn.parentElement.dataset.nombre
-let numero="5215512345678"
+let numero="5568596062"
 
 let mensaje=`Hola, me interesa el producto: ${producto}`
 
