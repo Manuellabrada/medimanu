@@ -43,181 +43,93 @@
 </div>
 
 <div id="publicidad" class="empresa-contenido">
-
 <div class="slider">
 <img id="imagenPublicidad" src="imagenes/publicidad1.jpg">
 <button class="btn prev" onclick="cambiarImagen(-1)">❮</button>
 <button class="btn next" onclick="cambiarImagen(1)">❯</button>
 </div>
-
 </div>
 
 <div id="info" class="empresa-contenido oculto">
-
-<p>
-Medivital es una empresa dedicada a brindar soluciones médicas modernas mediante sueroterapia
-y la distribución de insumos médicos de alta calidad para mejorar el bienestar de los pacientes.
-</p>
-
+<p>Medivital es una empresa dedicada a brindar soluciones médicas modernas mediante sueroterapia y la distribución de insumos médicos.</p>
 </div>
 
 </section>
 
 <section id="servicios" class="tarjeta oculto">
-
 <h1>Servicios</h1>
-
 <div class="cards">
-
-<div class="card">
-<h3>Sueroterapia</h3>
-<p>Terapias intravenosas para hidratación y recuperación.</p>
+<div class="card"><h3>Sueroterapia</h3></div>
+<div class="card"><h3>Vitaminas IV</h3></div>
+<div class="card"><h3>Prevención</h3></div>
 </div>
-
-<div class="card">
-<h3>Vitaminas intravenosas</h3>
-<p>Aplicación de complejos vitamínicos para mejorar energía.</p>
-</div>
-
-<div class="card">
-<h3>Tratamientos preventivos</h3>
-<p>Protocolos diseñados para mejorar bienestar general.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="sueroterapia" class="tarjeta oculto">
-
-<h1>Proceso de sueroterapia</h1>
-
+<h1>Proceso</h1>
 <div class="cards">
-
-<div class="card">
-<img src="imagenes/evaluacion.jpg" class="img-proceso">
-<h3>Evaluación inicial</h3>
-<p>Se revisa el estado general del paciente.</p>
+<div class="card"><img src="imagenes/evaluacion.jpg" class="img-proceso"><h3>Evaluación</h3></div>
+<div class="card"><img src="imagenes/preparacion.jpg" class="img-proceso"><h3>Preparación</h3></div>
+<div class="card"><img src="imagenes/aplicacion.jpg" class="img-proceso"><h3>Aplicación</h3></div>
 </div>
-
-<div class="card">
-<img src="imagenes/preparacion.jpg" class="img-proceso">
-<h3>Preparación del suero</h3>
-<p>Preparación de vitaminas y nutrientes.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/material.jpg" class="img-proceso">
-<h3>Material estéril</h3>
-<p>Uso de equipo médico completamente estéril.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/aplicacion.jpg" class="img-proceso">
-<h3>Aplicación intravenosa</h3>
-<p>Administración controlada del suero.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/absorcion.jpg" class="img-proceso">
-<h3>Absorción de nutrientes</h3>
-<p>Los nutrientes pasan directamente al torrente sanguíneo.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/descanso.jpg" class="img-proceso">
-<h3>Descanso del paciente</h3>
-<p>El paciente permanece relajado durante el tratamiento.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="horarios" class="tarjeta oculto">
-
-<h1 class="titulo-horarios">Horarios de atención</h1>
-
+<h1 class="titulo-horarios">Horarios</h1>
 <div class="tabla-horarios">
-
-<div class="horario"><span>Lunes</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Martes</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Miércoles</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Jueves</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Viernes</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Sábado</span><span>7:00 AM - 7:00 PM</span></div>
-<div class="horario"><span>Domingo</span><span>7:00 AM - 7:00 PM</span></div>
-
-<div class="horario festivo">
-<span>Días festivos</span>
-<span>8:00 AM - 2:00 PM</span>
+<div class="horario"><span>Lunes</span><span>7:00-7:00</span></div>
+<div class="horario"><span>Martes</span><span>7:00-7:00</span></div>
+<div class="horario"><span>Miércoles</span><span>7:00-7:00</span></div>
+<div class="horario"><span>Jueves</span><span>7:00-7:00</span></div>
+<div class="horario"><span>Viernes</span><span>7:00-7:00</span></div>
+<div class="horario festivo"><span>Festivos</span><span>8:00-2:00</span></div>
 </div>
-
-</div>
-
 </section>
 
 <section id="insumos" class="tarjeta oculto">
 
-<h1 class="titulo-catalogo">Catálogo de insumos médicos</h1>
+<h1 class="titulo-catalogo">Catálogo</h1>
 
 <div class="busqueda">
-
-<input type="text" id="buscador" placeholder="Buscar insumo médico..." onkeyup="buscarProducto()">
-
+<input type="text" id="buscador" onkeyup="buscarProducto()" placeholder="Buscar...">
 <select id="categoria" onchange="filtrarCategoria()">
-<option value="todos">Todas las categorías</option>
+<option value="todos">Todos</option>
 <option value="inyeccion">Inyección</option>
 <option value="proteccion">Protección</option>
 <option value="soluciones">Soluciones</option>
-<option value="equipo">Equipo médico</option>
+<option value="equipo">Equipo</option>
+<option value="medicamentos">Medicamentos</option>
+<option value="botiquin">Botiquín</option>
 </select>
-
 </div>
 
-<div class="catalogo" id="catalogo">
+<div class="catalogo">
 
-<div class="producto" data-nombre="jeringa esteril" data-categoria="inyeccion">
-<img src="imagenes/jeringa.jpg">
-<h3>Jeringa estéril</h3>
-<p>Jeringa desechable para uso clínico.</p>
-<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
-</div>
+<div class="producto" data-nombre="jeringa esteril" data-categoria="inyeccion"><img src="imagenes/jeringa.jpg"><h3>Jeringa</h3></div>
+<div class="producto" data-nombre="guantes latex" data-categoria="proteccion"><img src="imagenes/guantes.jpg"><h3>Guantes</h3></div>
+<div class="producto" data-nombre="cubrebocas" data-categoria="proteccion"><img src="imagenes/cubrebocas.jpg"><h3>Cubrebocas</h3></div>
+<div class="producto" data-nombre="suero" data-categoria="soluciones"><img src="imagenes/suero.jpg"><h3>Suero</h3></div>
+<div class="producto" data-nombre="cateter" data-categoria="equipo"><img src="imagenes/cateter.jpg"><h3>Catéter</h3></div>
 
-<div class="producto" data-nombre="guantes latex" data-categoria="proteccion">
-<img src="imagenes/guantes.jpg">
-<h3>Guantes de látex</h3>
-<p>Guantes médicos resistentes.</p>
-<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
-</div>
+<div class="producto" data-nombre="vendas" data-categoria="proteccion"><img src="imagenes/vendas.jpg"><h3>Vendas</h3></div>
+<div class="producto" data-nombre="gasas" data-categoria="proteccion"><img src="imagenes/gasas.jpg"><h3>Gasas</h3></div>
+<div class="producto" data-nombre="alcohol" data-categoria="proteccion"><img src="imagenes/alcohol.jpg"><h3>Alcohol</h3></div>
 
-<div class="producto" data-nombre="cubrebocas medico" data-categoria="proteccion">
-<img src="imagenes/cubrebocas.jpg">
-<h3>Cubrebocas médico</h3>
-<p>Protección respiratoria desechable.</p>
-<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
-</div>
+<div class="producto" data-nombre="ibuprofeno" data-categoria="medicamentos"><img src="imagenes/ibuprofeno.jpg"><h3>Ibuprofeno</h3></div>
+<div class="producto" data-nombre="paracetamol" data-categoria="medicamentos"><img src="imagenes/paracetamol.jpg"><h3>Paracetamol</h3></div>
+<div class="producto" data-nombre="omeprazol" data-categoria="medicamentos"><img src="imagenes/omeprazol.jpg"><h3>Omeprazol</h3></div>
 
-<div class="producto" data-nombre="suero fisiologico" data-categoria="soluciones">
-<img src="imagenes/suero.jpg">
-<h3>Suero fisiológico</h3>
-<p>Solución intravenosa estéril.</p>
-<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
-</div>
+<div class="producto" data-nombre="vitaminas" data-categoria="medicamentos"><img src="imagenes/vitaminas.jpg"><h3>Vitaminas</h3></div>
+<div class="producto" data-nombre="gomitas vitaminas" data-categoria="medicamentos"><img src="imagenes/gomitas.jpg"><h3>Gomitas</h3></div>
 
-<div class="producto" data-nombre="cateter intravenoso" data-categoria="equipo">
-<img src="imagenes/cateter.jpg">
-<h3>Catéter intravenoso</h3>
-<p>Para administración intravenosa.</p>
-<a class="btn-whatsapp" href="https://wa.me/5210000000000" target="_blank">Consultar</a>
-</div>
+<div class="producto" data-nombre="botiquin basico" data-categoria="botiquin"><img src="imagenes/botiquin1.jpg"><h3>Botiquín básico</h3></div>
+<div class="producto" data-nombre="botiquin familiar" data-categoria="botiquin"><img src="imagenes/botiquin2.jpg"><h3>Botiquín familiar</h3></div>
 
 </div>
 
 </section>
 
 </div>
-
 </div>
 
 <script src="script.js"></script>

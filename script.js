@@ -1,108 +1,28 @@
 function mostrar(seccion){
-
-document.querySelectorAll(".tarjeta").forEach(t=>{
-t.classList.add("oculto")
-})
-
+document.querySelectorAll(".tarjeta").forEach(t=>t.classList.add("oculto"))
 document.getElementById(seccion).classList.remove("oculto")
-
-if(window.innerWidth <= 768){
-cerrarMenu()
+if(window.innerWidth<=768){cerrarMenu()}
 }
-
-}
-
-function mostrarEmpresa(seccion){
-
-document.querySelectorAll(".empresa-contenido").forEach(c=>{
-c.classList.add("oculto")
-})
-
-document.getElementById(seccion).classList.remove("oculto")
-
-}
-
-let imagenes=[
-"imagenes/publicidad1.jpg",
-"imagenes/publicidad2.jpg",
-"imagenes/publicidad3.jpg"
-]
-
-let indice=0
-
-function cambiarImagen(direccion){
-
-indice+=direccion
-
-if(indice<0){indice=imagenes.length-1}
-if(indice>=imagenes.length){indice=0}
-
-document.getElementById("imagenPublicidad").src=imagenes[indice]
-
-}
-
-setInterval(()=>{
-
-indice++
-if(indice>=imagenes.length){indice=0}
-
-document.getElementById("imagenPublicidad").src=imagenes[indice]
-
-},4000)
 
 function toggleMenu(){
-
-let menu=document.getElementById("menu")
-let contenido=document.getElementById("contenido")
-
-menu.classList.toggle("activo")
-contenido.classList.toggle("oculto")
-
+document.getElementById("menu").classList.toggle("activo")
 }
 
 function cerrarMenu(){
-
-let menu=document.getElementById("menu")
-let contenido=document.getElementById("contenido")
-
-menu.classList.remove("activo")
-contenido.classList.remove("oculto")
-
+document.getElementById("menu").classList.remove("activo")
 }
 
 function buscarProducto(){
-
 let input=document.getElementById("buscador").value.toLowerCase()
-let productos=document.querySelectorAll(".producto")
-
-productos.forEach(p=>{
-let nombre=p.dataset.nombre
-
-if(nombre.includes(input)){
-p.style.display="block"
-}else{
-p.style.display="none"
-}
-
+document.querySelectorAll(".producto").forEach(p=>{
+let texto=p.dataset.nombre+" "+p.dataset.categoria
+p.style.display=texto.includes(input)?"block":"none"
 })
-
 }
 
 function filtrarCategoria(){
-
-let categoria=document.getElementById("categoria").value
-let productos=document.querySelectorAll(".producto")
-
-productos.forEach(p=>{
-
-if(categoria==="todos"){
-p.style.display="block"
-}else if(p.dataset.categoria===categoria){
-p.style.display="block"
-}else{
-p.style.display="none"
-}
-
+let cat=document.getElementById("categoria").value
+document.querySelectorAll(".producto").forEach(p=>{
+p.style.display=(cat==="todos"||p.dataset.categoria===cat)?"block":"none"
 })
-
 }
