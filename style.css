@@ -89,8 +89,10 @@ display:block;
 
 .img-proceso{
 width:100%;
-height:180px;
-object-fit:cover;
+height:auto;
+max-height:200px;
+object-fit:contain;
+background:#fff;
 border-radius:8px;
 margin-bottom:10px;
 }
@@ -127,8 +129,9 @@ margin:auto;
 
 .slider img{
 width:100%;
-height:400px;
-object-fit:cover;
+height:auto;
+max-height:400px;
+object-fit:contain;
 border-radius:10px;
 }
 
@@ -241,8 +244,10 @@ transition:.3s;
 
 .producto img{
 width:100%;
-height:180px;
-object-fit:cover;
+height:160px;
+object-fit:contain;
+background:#fff;
+padding:10px;
 }
 
 .producto h3{
@@ -314,11 +319,11 @@ grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 }
 
 .producto img{
-height:140px;
+height:130px;
 }
 
 .slider img{
-height:250px;
+max-height:250px;
 }
 
 }
