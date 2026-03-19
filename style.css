@@ -231,8 +231,11 @@ transition:.3s;
 
 .producto img{
 width:100%;
-height:180px;
-object-fit:cover;
+height:160px;
+object-fit:contain;
+background:#fff;
+padding:10px;
+box-sizing:border-box;
 }
 
 .producto h3{
@@ -307,4 +310,52 @@ grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 height:140px;
 }
 
+}
+
+.empresa-box{
+max-width:800px;
+margin:auto;
+background:linear-gradient(135deg,#f0f6ff,#ffffff);
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+animation:fadeIn 0.6s ease;
+}
+
+.empresa-titulo{
+text-align:center;
+color:#0d47a1;
+font-size:28px;
+margin-bottom:20px;
+}
+
+.empresa-texto{
+font-size:15px;
+color:#444;
+line-height:1.7;
+text-align:justify;
+}
+
+.empresa-texto strong{
+color:#0d47a1;
+}
+
+.empresa-cta{
+display:block;
+text-align:center;
+margin-top:20px;
+font-weight:bold;
+color:#1e88e5;
+font-size:18px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
