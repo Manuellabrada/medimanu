@@ -179,8 +179,15 @@ let max = new Date()
 
 max.setMonth(max.getMonth() + 3)
 
-let hoyFormato = hoy.toISOString().split("T")[0]
-let maxFormato = max.toISOString().split("T")[0]
+function formatoLocal(fecha){
+let year = fecha.getFullYear()
+let month = String(fecha.getMonth() + 1).padStart(2,'0')
+let day = String(fecha.getDate()).padStart(2,'0')
+return `${year}-${month}-${day}`
+}
+
+let hoyFormato = formatoLocal(hoy)
+let maxFormato = formatoLocal(max)
 
 document.querySelectorAll(".fecha-servicio").forEach(input=>{
 input.min = hoyFormato
