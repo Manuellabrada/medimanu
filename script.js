@@ -134,8 +134,10 @@ alert("Selecciona una fecha")
 return
 }
 
+let partes = fecha.split("-")
+let seleccion = new Date(partes[0], partes[1]-1, partes[2])
+
 let hoy = new Date()
-let seleccion = new Date(fecha)
 let max = new Date()
 
 max.setMonth(max.getMonth() + 3)
@@ -154,7 +156,11 @@ alert("Solo puedes agendar hasta 3 meses adelante")
 return
 }
 
-let fechaFormateada = seleccion.toLocaleDateString("es-MX")
+let dia = partes[2]
+let mes = partes[1]
+let anio = partes[0]
+
+let fechaFormateada = `${dia}/${mes}/${anio}`
 
 let numero = "5215568596062"
 
