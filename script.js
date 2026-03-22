@@ -134,7 +134,27 @@ alert("Selecciona una fecha")
 return
 }
 
-let fechaFormateada = new Date(fecha).toLocaleDateString("es-MX")
+let hoy = new Date()
+let seleccion = new Date(fecha)
+let max = new Date()
+
+max.setMonth(max.getMonth() + 3)
+
+hoy.setHours(0,0,0,0)
+seleccion.setHours(0,0,0,0)
+max.setHours(0,0,0,0)
+
+if(seleccion < hoy){
+alert("No puedes seleccionar fechas pasadas")
+return
+}
+
+if(seleccion > max){
+alert("Solo puedes agendar hasta 3 meses adelante")
+return
+}
+
+let fechaFormateada = seleccion.toLocaleDateString("es-MX")
 
 let numero = "5215568596062"
 
