@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="es">
 
 <head>
@@ -23,7 +23,7 @@
 
 <ul>
 <li onclick="mostrar('empresa')">Empresa</li>
-<li onclick="mostrar('servicios')">Servicios</li>
+<li onclick="mostrar('servicios')">Servicios y Agendar citas</li>
 <li onclick="mostrar('sueroterapia')">Sueroterapia</li>
 <li onclick="mostrar('horarios')">Horarios</li>
 <li onclick="mostrar('insumos')">Insumos médicos</li>
@@ -77,67 +77,129 @@ Además, contamos con un amplio catálogo de insumos médicos y medicamentos de 
 </section>
 
 <section id="servicios" class="tarjeta oculto">
-<h1>Servicios</h1>
+<h1>Servicios y Agendar cita</h1>
 <div class="cards">
+
 <div class="card">
 <h3>Sueroterapia</h3>
 <p>Terapias intravenosas para hidratación y recuperación.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Sueroterapia')">Agendar</button>
 </div>
+
 <div class="card">
-<h3>Vitaminas IV</h3>
-<p>Aplicación de vitaminas para mejorar energía.</p>
+<h3>Aplicación de inyección</h3>
+<p>Administración de medicamentos.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Aplicación de inyección')">Agendar</button>
 </div>
+
 <div class="card">
-<h3>Prevención</h3>
-<p>Protocolos de bienestar general.</p>
+<h3>Toma de presión</h3>
+<p>Monitoreo de presión arterial.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Toma de presión')">Agendar</button>
 </div>
+
+<div class="card">
+<h3>Curación de heridas</h3>
+<p>Limpieza y tratamiento profesional.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Curación de heridas')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Aplicación de sueros a domicilio</h3>
+<p>Hidratación y vitaminas en casa.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Aplicación de sueros a domicilio')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Control de glucosa</h3>
+<p>Medición de niveles de azúcar.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Control de glucosa')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Curación avanzada</h3>
+<p>Tratamiento de heridas y lesiones.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Curación avanzada')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Retiro de puntos</h3>
+<p>Extracción segura de suturas.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Retiro de puntos')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Aplicación de medicamentos</h3>
+<p>Administración segura de tratamientos.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Aplicación de medicamentos')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Monitoreo de signos vitales</h3>
+<p>Revisión constante del paciente.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Monitoreo de signos vitales')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Baño en cama</h3>
+<p>Higiene para pacientes en reposo.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Baño en cama')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Cuidado en casa</h3>
+<p>Atención a pacientes en domicilio.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Cuidado en casa')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Cuidado en hospital</h3>
+<p>Acompañamiento durante hospitalización.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Cuidado en hospital')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Cambio de vendajes</h3>
+<p>Curación y limpieza de heridas.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Cambio de vendajes')">Agendar</button>
+</div>
+
+<div class="card">
+<h3>Aplicación de inyecciones IM/IV</h3>
+<p>Administración profesional de medicamentos.</p>
+<input type="date" class="fecha-servicio">
+<button onclick="agendarServicio(this,'Aplicación de inyecciones IM/IV')">Agendar</button>
+</div>
+
 </div>
 </section>
 
 <section id="sueroterapia" class="tarjeta oculto">
-
 <h1>Proceso de sueroterapia</h1>
-
 <div class="cards">
 
-<div class="card">
-<img src="imagenes/evaluacion.jpg" class="img-proceso">
-<h3>Evaluación inicial</h3>
-<p>Se revisa el estado general del paciente.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/preparacion.jpg" class="img-proceso">
-<h3>Preparación del suero</h3>
-<p>Preparación de vitaminas y nutrientes.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/material.jpg" class="img-proceso">
-<h3>Material estéril</h3>
-<p>Uso de equipo médico completamente estéril.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/aplicacion.jpg" class="img-proceso">
-<h3>Aplicación intravenosa</h3>
-<p>Administración controlada del suero.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/absorcion.jpg" class="img-proceso">
-<h3>Absorción de nutrientes</h3>
-<p>Los nutrientes pasan directamente al torrente sanguíneo.</p>
-</div>
-
-<div class="card">
-<img src="imagenes/descanso.jpg" class="img-proceso">
-<h3>Descanso del paciente</h3>
-<p>El paciente permanece relajado durante el tratamiento.</p>
-</div>
+<div class="card"><img src="imagenes/evaluacion.jpg" class="img-proceso"><h3>Evaluación inicial</h3><p>Se revisa el estado general del paciente.</p></div>
+<div class="card"><img src="imagenes/preparacion.jpg" class="img-proceso"><h3>Preparación del suero</h3><p>Preparación de vitaminas y nutrientes.</p></div>
+<div class="card"><img src="imagenes/material.jpg" class="img-proceso"><h3>Material estéril</h3><p>Uso de equipo médico completamente estéril.</p></div>
+<div class="card"><img src="imagenes/aplicacion.jpg" class="img-proceso"><h3>Aplicación intravenosa</h3><p>Administración controlada del suero.</p></div>
+<div class="card"><img src="imagenes/absorcion.jpg" class="img-proceso"><h3>Absorción de nutrientes</h3><p>Los nutrientes pasan directamente al torrente sanguíneo.</p></div>
+<div class="card"><img src="imagenes/descanso.jpg" class="img-proceso"><h3>Descanso del paciente</h3><p>El paciente permanece relajado durante el tratamiento.</p></div>
 
 </div>
-
 </section>
 
 <section id="horarios" class="tarjeta oculto">
@@ -187,8 +249,27 @@ Además, contamos con un amplio catálogo de insumos médicos y medicamentos de 
 <div class="producto" data-nombre="ibuprofeno" data-categoria="medicamentos"><img src="imagenes/ibuprofeno.jpg"><h3>Ibuprofeno</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
 <div class="producto" data-nombre="paracetamol" data-categoria="medicamentos"><img src="imagenes/paracetamol.jpg"><h3>Paracetamol</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
 <div class="producto" data-nombre="omeprazol" data-categoria="medicamentos"><img src="imagenes/omeprazol.jpg"><h3>Omeprazol</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
-<div class="producto" data-nombre="vitaminas" data-categoria="medicamentos"><img src="imagenes/vitaminas.jpg"><h3>Vitaminas</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
-<div class="producto" data-nombre="gomitas" data-categoria="medicamentos"><img src="imagenes/gomitas.jpg"><h3>Gomitas</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+
+<div class="producto" data-nombre="vitamina c" data-categoria="medicamentos"><img src="imagenes/vitaminaC.jpg"><h3>Vitamina C</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="vitamina d3" data-categoria="medicamentos"><img src="imagenes/vitaminaD.jpg"><h3>Vitamina D3</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="complejo b" data-categoria="medicamentos"><img src="imagenes/complejoB.jpg"><h3>Complejo B</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="multivitaminico" data-categoria="medicamentos"><img src="imagenes/multivitaminico.jpg"><h3>Multivitamínico</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+
+<div class="producto" data-nombre="vitamina e" data-categoria="medicamentos"><img src="imagenes/vitaminaE.jpg"><h3>Vitamina E</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="omega 3" data-categoria="medicamentos"><img src="imagenes/omega3.jpg"><h3>Omega 3</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="calcio" data-categoria="medicamentos"><img src="imagenes/calcio.jpg"><h3>Calcio</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="magnesio" data-categoria="medicamentos"><img src="imagenes/magnesio.jpg"><h3>Magnesio</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="zinc" data-categoria="medicamentos"><img src="imagenes/zinc.jpg"><h3>Zinc</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="hierro" data-categoria="medicamentos"><img src="imagenes/hierro.jpg"><h3>Hierro</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="colageno" data-categoria="medicamentos"><img src="imagenes/colageno.jpg"><h3>Colágeno</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+
+<div class="producto" data-nombre="gomitas vitaminas" data-categoria="medicamentos"><img src="imagenes/gomitasvitaminas.jpg"><h3>Gomitas vitamínicas</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas vitamina c" data-categoria="medicamentos"><img src="imagenes/gomitasC.jpg"><h3>Gomitas Vitamina C</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas multivitaminicas" data-categoria="medicamentos"><img src="imagenes/gomitasmulti.jpg"><h3>Gomitas Multivitamínicas</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas omega 3" data-categoria="medicamentos"><img src="imagenes/gomitasomega.jpg"><h3>Gomitas Omega 3</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas vitamina d" data-categoria="medicamentos"><img src="imagenes/gomitasD.jpg"><h3>Gomitas Vitamina D</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas calcio" data-categoria="medicamentos"><img src="imagenes/gomitascalcio.jpg"><h3>Gomitas de Calcio</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
+<div class="producto" data-nombre="gomitas zinc" data-categoria="medicamentos"><img src="imagenes/gomitaszinc.jpg"><h3>Gomitas con Zinc</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
 
 <div class="producto" data-nombre="botiquin basico" data-categoria="botiquin"><img src="imagenes/botiquin1.jpg"><h3>Botiquín básico</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>
 <div class="producto" data-nombre="botiquin familiar" data-categoria="botiquin"><img src="imagenes/botiquin2.jpg"><h3>Botiquín familiar</h3><button class="btn-whatsapp" onclick="enviarWhats(this)">Consultar</button></div>

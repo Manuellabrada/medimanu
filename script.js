@@ -123,3 +123,44 @@ let url=`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`
 window.open(url,"_blank")
 
 }
+
+function agendarServicio(btn, servicio){
+
+let card = btn.parentElement
+let fecha = card.querySelector(".fecha-servicio").value
+
+if(fecha===""){
+alert("Selecciona una fecha")
+return
+}
+
+let fechaFormateada = new Date(fecha).toLocaleDateString("es-MX")
+
+let numero = "5215568596062"
+
+let mensaje = `Hola, deseo agendar una cita para ${servicio} el día ${fechaFormateada}`
+
+let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`
+
+window.open(url,"_blank")
+
+}
+
+function limitarFechas(){
+
+let hoy = new Date()
+let max = new Date()
+
+max.setMonth(max.getMonth() + 3)
+
+let hoyFormato = hoy.toISOString().split("T")[0]
+let maxFormato = max.toISOString().split("T")[0]
+
+document.querySelectorAll(".fecha-servicio").forEach(input=>{
+input.min = hoyFormato
+input.max = maxFormato
+})
+
+}
+
+window.addEventListener("load", limitarFechas)
